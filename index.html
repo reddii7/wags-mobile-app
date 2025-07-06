@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WAGS</title>
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- iOS specific tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="WAGS">
+  <link rel="apple-touch-icon" href="images/icons/icon-192x192.png">
+
+  <!-- Fonts and CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+
+  <!-- JS Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+
+<body class=""> <!-- Body class will be managed by JS -->
+
+  <!-- ======================================================= -->
+  <!-- STEP 1: DEDICATED CONTAINER FOR FIXED UI ELEMENTS -->
+  <!-- This container will live outside the main app content -->
+  <!-- and will hold the menu and other persistent controls. -->
+  <!-- ======================================================= -->
+  <div id="ui-overlay-container">
+    <div id="top-controls-container">
+        <!-- The menu button will be injected here by the router -->
+    </div>
+    <div id="navigation-container">
+        <!-- The full page nav will be injected here by the menu module -->
+    </div>
+  </div>
+
+
+  <!-- ======================================================= -->
+  <!-- STEP 2: MAIN APP CONTAINER -->
+  <!-- This is where the router will inject all the page content. -->
+  <!-- ======================================================= -->
+  <main id="app"></main>
+
+
+  <!-- SCRIPT LOADING (No changes here) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script type="module" src="app.js"></script>
+
+</body>
+
+</body>
+</html>
